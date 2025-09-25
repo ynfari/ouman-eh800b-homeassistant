@@ -1,0 +1,13 @@
+[Unit]
+Description=Ouman Flask API service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/opt/OumanHA/
+ExecStart=/opt/OumanHA/bin/python /opt/OumanHA/OumanHA.py
+Environment="PATH=/opt/OumanHA/bin"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
