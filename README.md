@@ -1,9 +1,11 @@
 # Ouman EH-800B homeassistant
 
-HomeAssistant integration using FlaskAPI on Raspberry Pi
+## HomeAssistant integration using FlaskAPI on Raspberry Pi
+
 These files allow you to use your non-network capable Ouman EH-800B model with HomeAssistant.
 
-Integraatio HomeAssistanttiin käyttäen Raspberry Pi tietokonetta. 
+## Integraatio HomeAssistanttiin käyttäen Raspberry Pi tietokonetta.
+
 Mahdollistaa ei-verkkoon kytkettävän "karvalakkimallin" Ouman EH-800B mallin liittämisen HomeAssistant alustaan.
 
 
@@ -22,4 +24,5 @@ Palvelu asentuu järjestelmään automaattisesti käynnistyväksi, kun palvelun 
 Raspberry Pi liitetään Oumaniin käyttäen usb-mini B kaapelia.
 
 Tässä projektissa staattisen IP:n asetteluita ei käydä läpi erikseen.
+
 
