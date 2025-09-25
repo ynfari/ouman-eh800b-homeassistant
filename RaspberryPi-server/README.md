@@ -55,7 +55,7 @@ def read_measurements():
 5. Start the new service
 `systemctl start OumanHA.service`
 
-Now the Flask Api should start providing the data on your RPI. You can navigate to http://<your rpi address>/measurements and see the 27 different measurements received from Ouman.
+Now the Flask Api should start providing the data on your RPI. You can navigate to http://<your rpi address>:5001/measurements and see the 27 different measurements received from Ouman.
 
 The measurements might change on different configurations. Below table is from my controller, that is used to control hydronic heating from wood burner.
 
