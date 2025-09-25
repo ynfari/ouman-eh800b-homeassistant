@@ -7,7 +7,7 @@
 # Uncomment measurements as needed, and add your own descriptions if they dont match your setup.
 
        
-  - resource: http://ouman_ip/measurements
+  - resource: http://ouman_ip:5001/measurements
     method: GET
     scan_interval: 20
     timeout: 5
@@ -198,4 +198,5 @@
 #        unit_of_measurement: "°C"
 #        device_class: temperature
 #        state_class: measurement
+
   
