@@ -1,0 +1,201 @@
+# OUMAN EH-800B sensors from Flask server 
+# Receives measurements from Ouman EH-800B from OumanHA.py server 
+# Copyright (c) Jari Väisänen 2025
+# Released under BSD 0.clause license
+
+# Modify the ouman_ip to your flask server IP address.
+# Uncomment measurements as needed, and add your own descriptions if they dont match your setup.
+
+       
+  - resource: http://ouman_ip/measurements
+    method: GET
+    scan_interval: 20
+    timeout: 5
+    sensor:
+      - name: "OU-Menovesi käyrän mukaan"
+        unique_id: ha_ouman_meas_1
+        value_template: '{{ value_json.measurements["1"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+
+      - name: "OU-Huonekompensointi"
+        unique_id: ha_ouman_meas_2
+        value_template: '{{ value_json.measurements["2"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+        
+      - name: "OU-Huonekompensoinnin aikakorjaus"
+        unique_id: ha_ouman_meas_3
+        value_template: '{{ value_json.measurements["3"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+        
+#      - name: "OU-4"
+#        unique_id: ha_ouman_meas_4
+#        value_template: '{{ value_json.measurements["4"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+        
+#      - name: "OU-5"
+#        unique_id: ha_ouman_meas_5
+#        value_template: '{{ value_json.measurements["5"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+        
+#      - name: "OU-6"
+#        unique_id: ha_ouman_meas_6
+#        value_template: '{{ value_json.measurements["6"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+#        
+      - name: "OU-Laskennallinen menovesi"
+        unique_id: ha_ouman_meas_7
+        value_template: '{{ value_json.measurements["7"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+        
+      - name: "OU-Asetusarvon hidastusvaikutus"
+        unique_id: ha_ouman_meas_8
+        value_template: '{{ value_json.measurements["8"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+        
+      - name: "OU-Menovesi"
+        unique_id: ha_ouman_meas_9
+        value_template: '{{ value_json.measurements["9"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+                
+      - name: "OU-Ulkolämpötila"
+        unique_id: ha_ouman_meas_10
+        value_template: '{{ value_json.measurements["10"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+        
+      - name: "OU-Hidastettu ulkolämpötila"
+        unique_id: ha_ouman_meas_11
+        value_template: '{{ value_json.measurements["11"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+        
+      - name: "OU-Huonelämpötila"
+        unique_id: ha_ouman_meas_12
+        value_template: '{{ value_json.measurements["12"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+        
+      - name: "OU-Hidastettu huonelämpötila"
+        unique_id: ha_ouman_meas_13
+        value_template: '{{ value_json.measurements["13"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+        
+      - name: "OU-Huonekaukosäädön vaikutus"
+        unique_id: ha_ouman_meas_14
+        value_template: '{{ value_json.measurements["14"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+        
+      - name: "OU-L1 Venttiilin asentotavoite"
+        unique_id: ha_ouman_meas_15
+        value_template: '{{ value_json.measurements["15"] | float }}'
+        unit_of_measurement: "%"
+        state_class: measurement
+        
+      - name: "OU-L1 venttiilin asento"
+        unique_id: ha_ouman_meas_16
+        value_template: '{{ value_json.measurements["16"] | float }}'
+        unit_of_measurement: "%"
+        state_class: measurement
+        
+#      - name: "OU-17"
+#        unique_id: ha_ouman_meas_17
+#        value_template: '{{ value_json.measurements["17"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+#        
+#      - name: "OU-18"
+#        unique_id: ha_ouman_meas_18
+#        value_template: '{{ value_json.measurements["18"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+        
+#      - name: "OU-19"
+#        unique_id: ha_ouman_meas_19
+#        value_template: '{{ value_json.measurements["19"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+        
+#      - name: "OU-20"
+#        unique_id: ha_ouman_meas_20
+#        value_template: '{{ value_json.measurements["20"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+        
+      - name: "OU-Ulkolämpötilan hidastusvaikutus"
+        unique_id: ha_ouman_meas_21
+        value_template: '{{ value_json.measurements["21"] | float }}'
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state_class: measurement
+        
+#      - name: "OU-22"
+#        unique_id: ha_ouman_meas_22
+#        value_template: '{{ value_json.measurements["22"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+#        
+#      - name: "OU-23"
+#        unique_id: ha_ouman_meas_23
+#        value_template: '{{ value_json.measurements["23"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+        
+#      - name: "OU-24"
+#        unique_id: ha_ouman_meas_24
+#        value_template: '{{ value_json.measurements["24"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+        
+#      - name: "OU-25"
+#        unique_id: ha_ouman_meas_25
+#        value_template: '{{ value_json.measurements["25"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+#        
+#      - name: "OU-26"
+#        unique_id: ha_ouman_meas_26
+#        value_template: '{{ value_json.measurements["26"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+        
+#      - name: "OU-27"
+#        unique_id: ha_ouman_meas_27
+#        value_template: '{{ value_json.measurements["27"] | float }}'
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+#        state_class: measurement
+  
