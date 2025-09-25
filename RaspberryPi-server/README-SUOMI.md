@@ -6,7 +6,7 @@
 # Asennusohjeet
 
 1. Luo uusi virtuaaliympäristö opt/OumanHA kansioon:
-`python3 -m venv /opt/OumanHA`
+`sudo python3 -m venv /opt/OumanHA`
 
 2. Kopioi kansioon _OumanHA.py_ ja _requirements.txt_.
 
@@ -43,6 +43,16 @@ def read_measurements():
 
 ```
 
+Voit koestaa python ohjelmaa ajamalla komennon virtuaaliympäristössä.
+```
+(OumanHA) root@raspberrypi-01:/opt/OumanHA# python3 OumanHA.py
+ * Serving Flask app 'OumanHA'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+```
+
 # Asenna OumanHA palveluksi Raspberryyn ja aseta se käynnistymään automaattisesti järjestelmän käynnistyessä.
 
 1. Kopioi _OumanHA.service_ tiedosto _/etc/systemd/system/_ kansioon.
@@ -56,7 +66,7 @@ def read_measurements():
 5. Käynnistä palvelu
 `systemctl start OumanHA.service`
 
-Hetken päästä FlaskAPI tuo näkyviin dataa Oumanista. Voit kokeilla selaimella http://<raspin_osoite>/measurements sivua, jossa pitäisi palautua kaikki 27 Oumanista noudettua mittausta.
+Hetken päästä FlaskAPI tuo näkyviin dataa Oumanista. Voit kokeilla selaimella http://<raspin_osoite>:5001/measurements sivua, jossa pitäisi palautua kaikki 27 Oumanista noudettua mittausta.
 
 
 Mittaukset voivat olla eri tavalla eri konfiguraatioissa. Allaoleva lista on oman Oumanini konfiguraatiosta päätelty, jossa L1 piiri säätää lämmitystä ja puukattila hoitaa lämmityksen.
