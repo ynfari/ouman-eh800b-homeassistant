@@ -1,0 +1,2 @@
+# Tell git to handle all files as is without touching into the line ending conventions
+* -text
