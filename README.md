@@ -6,7 +6,7 @@ These files allow you to use your non-network capable Ouman EH-800B model with H
 
 ## Integraatio HomeAssistanttiin käyttäen Raspberry Pi tietokonetta.
 
-Mahdollistaa ei-verkkoon kytkettävän "karvalakkimallin" Ouman EH-800B mallin liittämisen HomeAssistant alustaan.
+Mahdollistaa ei-verkkoon kytkettävän "karvalakkimallin" Ouman EH-800B laitteen liittämisen HomeAssistant alustaan.
 
 
 # Folders
@@ -22,6 +22,7 @@ Mahdollistaa ei-verkkoon kytkettävän "karvalakkimallin" Ouman EH-800B mallin l
 - Palvelu asentuu järjestelmään automaattisesti käynnistyväksi, kun palvelun asennuksen komennot ajetaan.
 - Raspberry Pi liitetään Oumaniin käyttäen usb-mini B kaapelia.
 - Tässä projektissa staattisen IP:n asetteluita ei käydä läpi erikseen.
+
 
 
 
