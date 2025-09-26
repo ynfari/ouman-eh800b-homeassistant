@@ -24,5 +24,10 @@ Mahdollistaa ei-verkkoon kytkettävän "karvalakkimallin" Ouman EH-800B laitteen
 - Tässä projektissa staattisen IP:n asetteluita ei käydä läpi erikseen.
 
 
+# Security
 
+This software is meant to be used in internal local area network, which is protected by measurements necessary. Exposing the device to public, Wide Area Network (WAN) is not recommended, and user should take necessary care of protecting their device.
 
+# Tietoturva
+
+Tämä ohjelmisto on tarkoitettu käytettäväksi sisäverkossa, joka on riittävän suojattu. Laitteen avaaminen suoraan internettiin ei ole suositeltavaa, vaan tulee huolehtia riittävistä toimista verkon suojaamiseksi.
